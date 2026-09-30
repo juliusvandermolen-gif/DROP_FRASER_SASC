@@ -3,6 +3,8 @@
 #SBATCH --partition=all
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=16G
+#SBATCH --mail-user="j.m.van_der_molen@lumc.nl"
+#SBATCH --mail-type="ALL"
 #SBATCH --time=02:00:00
 #SBATCH --output=%x_%j.out
 #SBATCH --error=%x_%j.err
