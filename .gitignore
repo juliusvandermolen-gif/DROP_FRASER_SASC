@@ -16,7 +16,9 @@ slurm-*.out
 *.err
 
 # Negeren van tijdelijke Conda of Python mappen
-.Data/
+Data/
+Output/
+.drop/
 .conda/
 __pycache__/
 .DS_Store
