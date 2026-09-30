@@ -1,0 +1,22 @@
+# Negeren van grote biologische databestanden
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.sam
+*.bai
+*.vcf
+*.fasta
+*.fa
+
+# Negeren van cluster logbestanden (SLURM / PBS)
+slurm-*.out
+*.log
+*.err
+
+# Negeren van tijdelijke Conda of Python mappen
+.Data/
+.conda/
+__pycache__/
+.DS_Store
