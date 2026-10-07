@@ -38,10 +38,12 @@ fds <- calculatePSIValues(fds)
 
 # Filtering junctions based on expression and variability
 # %%
+dir.create(outdir_plots, showWarnings = FALSE, recursive = TRUE) #directory for output plots
 message("Step 3: Filtering junctions based on expression and variability")
 fds <- filterExpressionAndVariability(fds, minDeltaPsi = 0, minExpressionInOneSample = 10, filter = TRUE)
+pdf(file.path(outdir_plots, "01_filter_expression.pdf"), width = 6, height = 5)
 plotFilterExpression(fds)
-
+dev.off()
 # Annotation introns with gene symbols. Check genome version that is compatible with BAM files. For example, if BAM files are aligned to hg38, use the corresponding annotation.
 # Change annotation via library(TxDb.Hsapiens.UCSC.hg38.knownGene) and library(org.Hs.eg.db) for hg38.
 # %%
@@ -53,5 +55,8 @@ fds <- annotateRangesWithTxDb(fds, txdb=txdb, orgDb=orgDb)
 # Sample co-variation before fitting the model. To find how samples correlate before correction to get rid of non-biological variation. 
 # This is important to check if there are any batch effects or other confounding factors that might affect the analysis.
 # %%
-message("Step 5: Sample co-variation before fitting the model")
+message("Step 5: Sample co-variation before fitting the model visualization")
+pdf(file.path(outdir_plots, "01_Heatmap_before_correction.pdf"), width = 6, height = 5)
 plotCountCorHeatmap(fds, type = type, normalized = FALSE, logit = TRUE)
+dev.off()
+
