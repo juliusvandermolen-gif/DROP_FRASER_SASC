@@ -5,6 +5,8 @@
 suppressPackageStartupMessages({
   library(FRASER)
   library(data.table)
+  library(TxDb.Hsapiens.UCSC.hg38.knownGene) 
+  library(org.Hs.eg.db)
 })
 
 # Parameters: Directory's, dataset
@@ -24,12 +26,23 @@ fds <- FraserDataSet(workingDir = dataset_output_dir, colData = anno_sample, nam
 
 # Counting reads in split and non-split reads
 # %%
+message("Step 1: Counting reads in split and non-split reads")
 fds <- countRNASeq(fds)
 
 # Calculate PSI/Jaccard metrics
 # %%
+message("Step 2: Calculate PSI/Jaccard values")
 fds <- calculatePSIValues(fds)
 
 # Filtering junctions based on expression and variability
 # %%
-fds_unfiltered <- filterExpressionAndVariability(fds, minDeltaPsi = 0, minExpressionInOneSample = 10, filter = TRUE)
+message("Step 3: Filtering junctions based on expression and variability")
+fds <- filterExpressionAndVariability(fds, minDeltaPsi = 0, minExpressionInOneSample = 10, filter = TRUE)
+
+# Annotation introns with gene symbols. Check genome version that is compatible with BAM files. For example, if BAM files are aligned to hg38, use the corresponding annotation.
+# Change annotation via library(TxDb.Hsapiens.UCSC.hg38.knownGene) and library(org.Hs.eg.db) for hg38.
+# %%
+txdb <- TxDb.Hsapiens.UCSC.hg38.knownGene
+orgdb <- org.Hs.eg.db
+message("Step 4: Annotating ranges with TxDb...")
+fds <- annotateRangesWithTxDb(fds, txdb=txdb, orgDb=orgDb)
