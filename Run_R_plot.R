@@ -60,3 +60,13 @@ pdf(file.path(outdir_plots, "01_Heatmap_before_correction.pdf"), width = 6, heig
 plotCountCorHeatmap(fds, type = type, normalized = FALSE, logit = TRUE)
 dev.off()
 
+# Optimal dimension selection latent space. Important before fitting model.
+# %%
+message("Step 6: Optimal dimension selection latent space")
+set.seed(42)
+fds <- estimateBestQ(fds, type = type)
+q_dim <- getBestQ(fds, type = type)
+message("Optimal dimension (q) selected: ", q_dim)
+
+plotEncDimSearch(fds, type = type, plotType = "auc")
+
