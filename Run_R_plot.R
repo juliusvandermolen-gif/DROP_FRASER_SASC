@@ -18,6 +18,8 @@ type            <- "jaccard"
 q_dim           <- 3
 outdir_plots    <- "fraser_plots_out"
 dataset_output_dir <- "ds_output" # Directory where the dataset is stored.
+
+
 # Data. For now the real data and not the test data
 # %%
 anno_sample <- fread("path/to/annotation_sample.csv") # Annotation sample file. 
@@ -38,7 +40,7 @@ fds <- calculatePSIValues(fds)
 # %%
 message("Step 3: Filtering junctions based on expression and variability")
 fds <- filterExpressionAndVariability(fds, minDeltaPsi = 0, minExpressionInOneSample = 10, filter = TRUE)
-plotFilterExpression(fds, outdir = outdir_plots)
+plotFilterExpression(fds)
 
 # Annotation introns with gene symbols. Check genome version that is compatible with BAM files. For example, if BAM files are aligned to hg38, use the corresponding annotation.
 # Change annotation via library(TxDb.Hsapiens.UCSC.hg38.knownGene) and library(org.Hs.eg.db) for hg38.
@@ -47,3 +49,9 @@ txdb <- TxDb.Hsapiens.UCSC.hg38.knownGene
 orgdb <- org.Hs.eg.db
 message("Step 4: Annotating ranges with TxDb...")
 fds <- annotateRangesWithTxDb(fds, txdb=txdb, orgDb=orgDb)
+
+# Sample co-variation before fitting the model. To find how samples correlate before correction to get rid of non-biological variation. 
+# This is important to check if there are any batch effects or other confounding factors that might affect the analysis.
+# %%
+message("Step 5: Sample co-variation before fitting the model")
+plotCountCorHeatmap(fds, type = type, normalized = FALSE, logit = TRUE)
