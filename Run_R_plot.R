@@ -16,7 +16,7 @@ dataset_dir     <- NA       # only needed for real data (where DROP saved the Fr
 annotation_name <- "raw-local" # Name of the annotation. Needs sampleID and BAM files
 type            <- "jaccard"
 q_dim           <- 3
-outdir          <- "fraser_plots_out"
+outdir_plots    <- "fraser_plots_out"
 dataset_output_dir <- "ds_output" # Directory where the dataset is stored.
 # Data. For now the real data and not the test data
 # %%
@@ -38,6 +38,7 @@ fds <- calculatePSIValues(fds)
 # %%
 message("Step 3: Filtering junctions based on expression and variability")
 fds <- filterExpressionAndVariability(fds, minDeltaPsi = 0, minExpressionInOneSample = 10, filter = TRUE)
+plotFilterExpression(fds, outdir = outdir_plots)
 
 # Annotation introns with gene symbols. Check genome version that is compatible with BAM files. For example, if BAM files are aligned to hg38, use the corresponding annotation.
 # Change annotation via library(TxDb.Hsapiens.UCSC.hg38.knownGene) and library(org.Hs.eg.db) for hg38.
