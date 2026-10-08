@@ -5,7 +5,7 @@
 suppressPackageStartupMessages({
   library(FRASER)
   library(data.table)
-  library(TxDb.Hsapiens.UCSC.hg38.knownGene) 
+  library(TxDb.Hsapiens.UCSC.hg38.knownGene) # Annotation for gene symbols
   library(org.Hs.eg.db)
 })
 
@@ -14,7 +14,7 @@ suppressPackageStartupMessages({
 use_test_data   <- FALSE     # TRUE = testdata, FALSE = real data
 dataset_dir     <- NA       # only needed for real data (where DROP saved the FraserDataSet)
 annotation_name <- "raw-local" # Name of the annotation. Needs sampleID and BAM files
-type            <- "jaccard"
+type            <- c("jaccard", "psi5", "psi3")
 q_dim           <- 3
 outdir_plots    <- "fraser_plots_out"
 dataset_output_dir <- "ds_output" # Directory where the dataset is stored.
@@ -35,7 +35,7 @@ fds <- countRNASeq(fds)
 # Calculate PSI/Jaccard metrics
 # %%
 message("Step 2: Calculate PSI/Jaccard values")
-fds <- calculatePSIValues(fds)
+fds <- calculatePSIValues(fds, type = type)
 
 # Filtering junctions based on expression and variability
 # %%
@@ -45,29 +45,45 @@ fds <- filterExpressionAndVariability(fds, minDeltaPsi = 0, minExpressionInOneSa
 pdf(file.path(outdir_plots, paste0(plot_version, "_filter_expression.pdf")), width = 6, height = 5)
 plotFilterExpression(fds)
 dev.off()
+
 # Annotation introns with gene symbols. Check genome version that is compatible with BAM files. For example, if BAM files are aligned to hg38, use the corresponding annotation.
 # Change annotation via library(TxDb.Hsapiens.UCSC.hg38.knownGene) and library(org.Hs.eg.db) for hg38.
 # %%
 txdb <- TxDb.Hsapiens.UCSC.hg38.knownGene
 orgdb <- org.Hs.eg.db
 message("Step 4: Annotating ranges with TxDb...")
-fds <- annotateRangesWithTxDb(fds, txdb=txdb, orgDb=orgDb)
+fds <- annotateRangesWithTxDb(fds, txdb=txdb, orgDb=orgdb)
 
 # Sample co-variation before fitting the model. To find how samples correlate before correction to get rid of non-biological variation. 
 # This is important to check if there are any batch effects or other confounding factors that might affect the analysis.
 # %%
 message("Step 5: Sample co-variation before fitting the model visualization")
-pdf(file.path(outdir_plots, paste0(plot_version, "_Heatmap_before_correction.pdf")), width = 6, height = 5)
-plotCountCorHeatmap(fds, type = type, normalized = FALSE, logit = TRUE)
-dev.off()
+for (t in type) {
+  pdf(file.path(outdir_plots, paste0(plot_version, "_heatmap_before_correction_", t, ".pdf")), width = 6, height = 5)
+  print(plotCountCorHeatmap(fds, type = t, normalized = FALSE, logit = TRUE))
+  dev.off()
+}
 
 # Optimal dimension selection latent space. Important before fitting model.
 # %%
 message("Step 6: Optimal dimension selection latent space")
 set.seed(42)
-fds <- estimateBestQ(fds, type = type)
-q_dim <- getBestQ(fds, type = type)
-message("Optimal dimension (q) selected: ", q_dim)
+
+q_list_dim <- list()
+for (t in type){
+  use_oht <- (t == "jaccard") # Use OHT for jaccard, not for psi5 and psi3. Returns True or False with checking jaccard
+  fds <- estimateBestQ(fds, type = t, useOHT = use_oht)
+  q_dim <- getBestQ(fds, type = t)
+  q_list_dim[[t]] <- q_dim
+  message("Optimal dimension (q) selected with ", t, ": ", q_dim)
+  
+  #plotting the optimal dimension selection
+  pdf(file.path(outdir_plots, paste0(plot_version, "_Optimal_Dimension_Selection_", t, ".pdf")),
+      width = 6, height = 5)
+  print(plotEncDimSearch(fds, type = t, plotType = if (use_oht) "sv" else "auc"))
+  dev.off()
+
+}
 
 pdf(file.path(outdir_plots, paste0(plot_version, "_Optimal_Dimension_Selection.pdf")), width = 6, height = 5)
 plotEncDimSearch(fds, type = type, plotType = "auc")
