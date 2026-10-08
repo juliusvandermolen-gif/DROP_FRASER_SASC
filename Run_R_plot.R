@@ -11,14 +11,13 @@ suppressPackageStartupMessages({
 
 # Parameters: Directory's, dataset
 # %%
-use_test_data   <- FALSE     # TRUE = testdata, FALSE = real data
 dataset_dir     <- NA       # only needed for real data (where DROP saved the FraserDataSet)
 annotation_name <- "raw-local" # Name of the annotation. Needs sampleID and BAM files
 type            <- c("jaccard", "psi5", "psi3")
-q_dim           <- 3
 outdir_plots    <- "fraser_plots_out"
 dataset_output_dir <- "ds_output" # Directory where the dataset is stored.
 plot_version <- 1
+min_cut_expression <- 10 # minimum reads in at least one sample. Paper uses 20
 
 
 # Data. For now the real data and not the test data
@@ -30,18 +29,18 @@ fds <- FraserDataSet(workingDir = dataset_output_dir, colData = anno_sample, nam
 # Counting reads in split and non-split reads
 # %%
 message("Step 1: Counting reads in split and non-split reads")
-fds <- countRNASeq(fds)
+fds <- countRNAData(fds)
 
 # Calculate PSI/Jaccard metrics
 # %%
 message("Step 2: Calculate PSI/Jaccard values")
-fds <- calculatePSIValues(fds, type = type)
+fds <- calculatePSIValues(fds, types = type)
 
 # Filtering junctions based on expression and variability
 # %%
 dir.create(outdir_plots, showWarnings = FALSE, recursive = TRUE) #directory for output plots
 message("Step 3: Filtering junctions based on expression and variability")
-fds <- filterExpressionAndVariability(fds, minDeltaPsi = 0, minExpressionInOneSample = 10, filter = TRUE)
+fds <- filterExpressionAndVariability(fds, minDeltaPsi = 0, minExpressionInOneSample = min_cut_expression, filter = TRUE)
 pdf(file.path(outdir_plots, paste0(plot_version, "_filter_expression.pdf")), width = 6, height = 5)
 plotFilterExpression(fds)
 dev.off()
@@ -73,9 +72,6 @@ q_list_dim <- list()
 for (t in type){
   use_oht <- (t == "jaccard") # Use OHT for jaccard, not for psi5 and psi3. Returns True or False with checking jaccard
   fds <- estimateBestQ(fds, type = t, useOHT = use_oht)
-  q_dim <- getBestQ(fds, type = t)
-  q_list_dim[[t]] <- q_dim
-  message("Optimal dimension (q) selected with ", t, ": ", q_dim)
   
   #plotting the optimal dimension selection
   pdf(file.path(outdir_plots, paste0(plot_version, "_Optimal_Dimension_Selection_", t, ".pdf")),
@@ -83,31 +79,43 @@ for (t in type){
   print(plotEncDimSearch(fds, type = t, plotType = if (use_oht) "sv" else "auc"))
   dev.off()
 
+  q_list_dim[[t]] <- bestQ(fds, type = t)
+  message("Optimal dimension (q) for ", t, ": ", q_list_dim[[t]])
 }
 
-pdf(file.path(outdir_plots, paste0(plot_version, "_Optimal_Dimension_Selection.pdf")), width = 6, height = 5)
-plotEncDimSearch(fds, type = type, plotType = "auc")
-dev.off()
-
+q_vec <- unlist(q_list_dim) #List change to vector
 
 # Model fitting with FRASER(). Most intens task
 # %%
 message("Step 7: Model fitting with FRASER()")
-fds <- FRASER(fds, type = type, q = c(jaccard = q_dim), implementation = "AE", iterations = 15)
+fds <- FRASER(fds, type = type, q = q_vec, implementation = "AE", iterations = 15) #Model run
 
-pdf(file.path(outdir_plots, paste0(plot_version, "_Heatmap_after_correction.pdf")), width = 6, height = 5)
-plotCountCorHeatmap(fds, type = type, logit = TRUE, normalized = TRUE)
-dev.off()
+for (t in type) {
+  pdf(file.path(outdir_plots, paste0(plot_version, "_heatmap_after_correction_", t, ".pdf")), width = 6, height = 5)
+  print(plotCountCorHeatmap(fds, type = t, normalized = TRUE, logit = TRUE))
+  dev.off()
+}
 
 
 # Results. Usefull for specific cutoffs
 # %%
 message("Step 8: Results: Extracting results aberrant splicing events")
-res <- results(fds, padjCutoff=0.05, deltaPsiCutoff=0.1, minCount = 10) # Cutoffs arguments
+res <- results(fds, psiType = type, padjCutoff=0.05, deltaPsiCutoff=0.1, minCount = 10) # Cutoffs arguments
 
 
 # Sample plots
 message("Step 10: QC and overview plots")
-plotAberrantPerSample(fds, padjCutoff = 0.05, deltaPsiCutoff = 0.3)
-plotVolcano(fds, sampleID = "sample1", type = type, aggregate = TRUE)
-plotQQ(fds, aggregate = TRUE, global = TRUE)
+
+plotAberrantPerSample(fds, type = type, padjCutoff = 0.05, deltaPsiCutoff = 0.3)
+
+for (t in type){
+  pdf(file.path(outdir_plots, paste0(plot_version, "_Volcano_sample1_", t, ".pdf")),
+    width = 6, height = 5)
+  print(plotVolcano(fds, sampleID = "sample1", type = t, aggregate = TRUE))
+  dev.off()
+
+  pdf(file.path(outdir_plots, paste0(plot_version, "_QQplot_", t, ".pdf")),
+      width = 6, height = 5)
+  print(plotQQ(fds, type = t, aggregate = TRUE, global = TRUE))
+  dev.off()
+}
