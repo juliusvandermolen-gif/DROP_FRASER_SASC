@@ -11,7 +11,6 @@ suppressPackageStartupMessages({
 
 # Parameters: Directory's, dataset
 # %%
-dataset_dir     <- NA       # only needed for real data (where DROP saved the FraserDataSet)
 annotation_name <- "raw-local" # Name of the annotation. Needs sampleID and BAM files
 type            <- c("jaccard", "psi5", "psi3")
 outdir_plots    <- "fraser_plots_out"
