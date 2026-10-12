@@ -32,8 +32,8 @@ aberrantExpression:
   yieldSize: 2000000
   useOHTtoObtainQ: true
 aberrantSplicing:
-  run: true
-  groups:
+  run: true   # Run FRASER on the data. Check to discard on other modules.
+  groups:     # Include external group with public count data.
   - fraser
   - fraser_external
   recount: true

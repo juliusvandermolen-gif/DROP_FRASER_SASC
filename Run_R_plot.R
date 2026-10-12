@@ -6,7 +6,7 @@ suppressPackageStartupMessages({
   library(FRASER)
   library(data.table)
   library(TxDb.Hsapiens.UCSC.hg38.knownGene) # Annotation for gene symbols
-  library(org.Hs.eg.db)
+  library(org.Hs.eg.db) # organism annotation package what translates between different identifiers with gene symbols
 })
 
 # Parameters: Directory's, dataset
