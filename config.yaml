@@ -33,24 +33,24 @@ aberrantExpression:
   useOHTtoObtainQ: true
 aberrantSplicing:
   run: true   # Run FRASER on the data. Check to discard on other modules.
-  groups:     # Include external group with public count data.
+  groups:     # Include external group with public count data. Probably discard external group because of overlap junction problem.
   - fraser
   - fraser_external
-  recount: true
-  longRead: false
+  recount: true #recounts BAM files even if there are already count files.
+  longRead: false #Set to true only if counting Nanopore or PacBio long reads.
   keepNonStandardChrs: false
-  filter: false
-  minExpressionInOneSample: 20
-  quantileMinExpression: 10
-  minDeltaPsi: 0.0
-  implementation: PCA
+  filter: true  #Filters introns/junctions
+  minExpressionInOneSample: 20 #Minimal reads for intron in at least one sample over cohort to be kept for analysis.
+  quantileMinExpression: 10 #Minimal abundance reads for specific quantile from quantileForFiltering to be kept for analysis. For example, if quantileForFiltering=0.95, then the top 5% of introns/junctions with the highest abundance will be kept for analysis.
+  minDeltaPsi: 0.0  #Minimal variation of junction event compared to other events.
+  implementation: PCA-BB-Decoder
   padjCutoff: 0.1
-  maxTestedDimensionProportion: 6
+  maxTestedDimensionProportion: 6 #Maximal number of tested dimensions for FRASER.
   genesToTest: Data/genes_to_test.yaml
   useOHTtoObtainQ: true
   FRASER_version: FRASER2
-  deltaPsiCutoff: 0.1
-  quantileForFiltering: 0.25
+  deltaPsiCutoff: 0.1 #Minimal deltaPsi for an intron to be considered aberrant. 
+  quantileForFiltering: 0.95  #Quatile for filtering top. 0,95=5% > quantileMinExpression.
 mae:
   run: false
   groups:
