@@ -1,12 +1,12 @@
 projectTitle: Detection of RNA Outlier Pipeline
 htmlOutputPath: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Output/html
 indexWithFolderName: true
-root: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Output
+root: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Output  #Path of folder where output with processed_data, processed_results and html(check htmlOutputPath) will be
 sampleAnnotation: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/sample_annotation.tsv
 geneAnnotation:
-  v29: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/gencode_annotation_trunc.gtf
+  v29: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/gencode_annotation_trunc.gtf  #GTF file.
 genomeAssembly: hg19
-genome:
+genome: #Path genome fasta files.
   ncbi: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/chr21_ncbi.fa
   ucsc: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/chr21.fa
 hpoFile: null
@@ -19,7 +19,7 @@ exportCounts:
   - outrider_external
   - fraser_external
 aberrantExpression:
-  run: true
+  run: false
   groups:
   - outrider
   - outrider_external
@@ -52,7 +52,7 @@ aberrantSplicing:
   deltaPsiCutoff: 0.1
   quantileForFiltering: 0.25
 mae:
-  run: true
+  run: false
   groups:
   - mae
   gatkIgnoreHeaderCheck: true
@@ -66,7 +66,7 @@ mae:
   - mae
   dnaRnaMatchCutoff: 0.85
 rnaVariantCalling:
-  run: true
+  run: false
   groups:
   - batch_0
   - batch_1
