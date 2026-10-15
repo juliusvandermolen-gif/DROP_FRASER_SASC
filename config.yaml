@@ -35,7 +35,6 @@ aberrantSplicing:
   run: true   # Run FRASER on the data. Check to discard on other modules.
   groups:     # Include external group with public count data. Probably discard external group because of overlap junction problem.
   - fraser
-  - fraser_external
   recount: true #recounts BAM files even if there are already count files.
   longRead: false #Set to true only if counting Nanopore or PacBio long reads.
   keepNonStandardChrs: false
