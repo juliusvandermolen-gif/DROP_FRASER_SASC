@@ -46,7 +46,7 @@ aberrantSplicing:
   padjCutoff: 0.1
   maxTestedDimensionProportion: 6 #Maximal number of tested dimensions for FRASER.
   genesToTest: Data/genes_to_test.yaml
-  useOHTtoObtainQ: true
+  useOHTtoObtainQ: false
   FRASER_version: FRASER2
   deltaPsiCutoff: 0.1 #Minimal deltaPsi for an intron to be considered aberrant. 
   quantileForFiltering: 0.95  #Quatile for filtering top. 0,95=5% > quantileMinExpression.
