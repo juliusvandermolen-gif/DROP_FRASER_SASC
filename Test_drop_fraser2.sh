@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=drop_splicing
+#SBATCH --job-name=drop_splicing_PCABBDenoising
 #SBATCH --partition=all
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=16G
