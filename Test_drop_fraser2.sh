@@ -17,4 +17,3 @@ module list
 
 snakemake aberrantSplicing \
     --cores $SLURM_CPUS_PER_TASK \
-    --rerun-triggers mtime \

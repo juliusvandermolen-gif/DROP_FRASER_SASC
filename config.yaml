@@ -1,14 +1,14 @@
 projectTitle: Detection of RNA Outlier Pipeline
-htmlOutputPath: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Output/html
+htmlOutputPath: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_15/10/html
 indexWithFolderName: true
-root: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Output  #Path of folder where output with processed_data, processed_results and html(check htmlOutputPath) will be
-sampleAnnotation: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/sample_annotation.tsv
+root: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_15/10  #Path of folder where output with processed_data, processed_results and html(check htmlOutputPath) will be
+sampleAnnotation: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/sample_annotation.tsv
 geneAnnotation:
-  v29: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/gencode_annotation_trunc.gtf  #GTF file.
+  v29: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/gencode_annotation_trunc.gtf  #GTF file.
 genomeAssembly: hg19
 genome: #Path genome fasta files.
-  ncbi: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/chr21_ncbi.fa
-  ucsc: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/chr21.fa
+  ncbi: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/chr21_ncbi.fa
+  ucsc: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/chr21.fa
 hpoFile: null
 random_seed: true
 exportCounts:
@@ -71,10 +71,10 @@ rnaVariantCalling:
   - batch_0
   - batch_1
   highQualityVCFs:
-  - /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/high_confidence_snps.vcf.gz
-  - /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/high_confidence_indels.vcf.gz
-  dbSNP: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/dbSNP_chr21.vcf.gz
-  repeat_mask: /exports/sascstudent/jmvandermolen1/drop_demo_fraser2/Data/repeat_mask_chr21.bed
+  - /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/high_confidence_snps.vcf.gz
+  - /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/high_confidence_indels.vcf.gz
+  dbSNP: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/dbSNP_chr21.vcf.gz
+  repeat_mask: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/repeat_mask_chr21.bed
   createSingleVCF: true
   addAF: false
   maxAF: 0.001
