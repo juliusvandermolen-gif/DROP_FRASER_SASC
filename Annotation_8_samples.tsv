@@ -1,0 +1,9 @@
+RNA_ID	RNA_BAM_FILE	DNA_VCF_FILE	DNA_ID	DROP_GROUP	PAIRED_END	COUNT_MODE	COUNT_OVERLAPS	STRAND	HPO_TERMS	GENE_COUNTS_FILE	GENE_ANNOTATION	GENOME	SPLICE_COUNTS_DIR	
+R1.26.00016	/exports/sascstudent/jmvandermolen1/107432-004/21458215.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00017	/exports/sascstudent/jmvandermolen1/107432-004/21458211.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R1.26.00022	/exports/sascstudent/jmvandermolen1/107432-004/21458203.dedup.bam			Fibroblast_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00023	/exports/sascstudent/jmvandermolen1/107432-004/21458201.dedup.bam			Fibroblast_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R1.26.00020	/exports/sascstudent/jmvandermolen1/107432-004/21458213.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00021	/exports/sascstudent/jmvandermolen1/107432-004/21458205.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R1.26.00018	/exports/sascstudent/jmvandermolen1/107432-004/21458209.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00019	/exports/sascstudent/jmvandermolen1/107432-004/21458207.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
