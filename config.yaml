@@ -1,4 +1,4 @@
-projectTitle: Detection of RNA Outlier Pipeline
+projectTitle: DROP 12 sample run
 htmlOutputPath: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_15/10/html
 indexWithFolderName: true
 root: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_15/10  #Path of folder where output with processed_data, processed_results and html(check htmlOutputPath) will be
@@ -7,7 +7,7 @@ geneAnnotation:
   v29: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/gencode_annotation_trunc.gtf  #GTF file.
 genomeAssembly: hg19
 genome: #Path genome fasta files.
-  ncbi: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/chr21_ncbi.fa
+  ncbi: /exports/sascstudent/hzoet/star/GRCh38.primary_assembly.genome.fa #Reference genome used for alignment RNA-seq run
   ucsc: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/chr21.fa
 hpoFile: null
 random_seed: true
