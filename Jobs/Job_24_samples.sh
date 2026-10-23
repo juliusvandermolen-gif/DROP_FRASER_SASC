@@ -9,8 +9,11 @@
 #SBATCH --output=%x_%j.out
 #SBATCH --error=%x_%j.err
 
+echo "loading modules"
 module purge
 module load tools/miniconda/python3.12/24.9.2
+
+echo "activating conda environment"
 eval "$(conda shell.bash hook)"
 conda activate /exports/sascstudent/jmvandermolen1/conda_envs/drop_env
 
