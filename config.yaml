@@ -1,19 +1,18 @@
-projectTitle: Detection of RNA Outlier Pipeline
-htmlOutputPath: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_15/10/html
+projectTitle: DROP 24 sample run
+htmlOutputPath: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_24_samples/html
 indexWithFolderName: true
-root: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_15/10  #Path of folder where output with processed_data, processed_results and html(check htmlOutputPath) will be
-sampleAnnotation: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/sample_annotation.tsv
+root: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_24_samples  #Path of folder where output with processed_data, processed_results and html(check htmlOutputPath) will be
+sampleAnnotation: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Annotation_24_samples.tsv
 geneAnnotation:
-  v29: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/gencode_annotation_trunc.gtf  #GTF file.
-genomeAssembly: hg19
+  GRCh38_104: /exports/sascstudent/jmvandermolen1/107432-004/Homo_sapiens.GRCh38.104.gtf  #GTF file.
+genomeAssembly: hg38
 genome: #Path genome fasta files.
-  ncbi: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/chr21_ncbi.fa
-  ucsc: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Data/chr21.fa
+  ncbi: /exports/sascstudent/jmvandermolen1/107432-004/Homo_sapiens.GRCh38.dna.primary_assembly.fa #Reference genome used for alignment RNA-seq run
 hpoFile: null
 random_seed: true
 exportCounts:
   geneAnnotations:
-  - v29
+  - GRCh38_104
   excludeGroups:
   - mae
   - outrider_external
@@ -34,7 +33,8 @@ aberrantExpression:
 aberrantSplicing:
   run: true   # Run FRASER on the data. Check to discard on other modules.
   groups:     # Include external group with public count data. Probably discard external group because of overlap junction problem.
-  - fraser
+  - Lymphocyte_NMD
+  - Lymphocyte_NMD_inhibit
   recount: true #recounts BAM files even if there are already count files.
   longRead: false #Set to true only if counting Nanopore or PacBio long reads.
   keepNonStandardChrs: false
@@ -45,7 +45,7 @@ aberrantSplicing:
   implementation: PCA-BB-Decoder
   padjCutoff: 0.1
   maxTestedDimensionProportion: 6 #Maximal number of tested dimensions for FRASER.
-  genesToTest: Data/genes_to_test.yaml
+  genesToTest: null
   useOHTtoObtainQ: false
   FRASER_version: FRASER2
   deltaPsiCutoff: 0.1 #Minimal deltaPsi for an intron to be considered aberrant. 
