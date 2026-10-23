@@ -1,8 +1,8 @@
-projectTitle: DROP 8 sample run
-htmlOutputPath: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_8_samples/html
+projectTitle: DROP 24 sample run
+htmlOutputPath: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_24_samples/html
 indexWithFolderName: true
-root: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_8_samples  #Path of folder where output with processed_data, processed_results and html(check htmlOutputPath) will be
-sampleAnnotation: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Annotation_8_samples.tsv
+root: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_24_samples  #Path of folder where output with processed_data, processed_results and html(check htmlOutputPath) will be
+sampleAnnotation: /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Annotation_24_samples.tsv
 geneAnnotation:
   GRCh38_104: /exports/sascstudent/jmvandermolen1/107432-004/Homo_sapiens.GRCh38.104.gtf  #GTF file.
 genomeAssembly: hg38

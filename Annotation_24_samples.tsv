@@ -1,0 +1,25 @@
+RNA_ID	RNA_BAM_FILE	DNA_VCF_FILE	DNA_ID	DROP_GROUP	PAIRED_END	COUNT_MODE	COUNT_OVERLAPS	STRAND	HPO_TERMS	GENE_COUNTS_FILE	GENE_ANNOTATION	GENOME	SPLICE_COUNTS_DIR	
+R1.26.00016	/exports/sascstudent/jmvandermolen1/107432-004/21458215.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00017	/exports/sascstudent/jmvandermolen1/107432-004/21458211.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R1.26.00020	/exports/sascstudent/jmvandermolen1/107432-004/21458213.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00021	/exports/sascstudent/jmvandermolen1/107432-004/21458205.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R1.26.00018	/exports/sascstudent/jmvandermolen1/107432-004/21458209.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00019	/exports/sascstudent/jmvandermolen1/107432-004/21458207.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R1.26.00010	/exports/sascstudent/jmvandermolen1/107432-003/21394638.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00011	/exports/sascstudent/jmvandermolen1/107432-003/21394636.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R1.26.00003	/exports/sascstudent/jmvandermolen1/107432-003/21394644.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00004	/exports/sascstudent/jmvandermolen1/107432-003/21394642.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R1.26.00006	/exports/sascstudent/jmvandermolen1/107432-003/21394646.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00007	/exports/sascstudent/jmvandermolen1/107432-003/21394640.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R1.26.00013	/exports/sascstudent/jmvandermolen1/107432-003/21394650.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_104	ncbi		
+R2.26.00014	/exports/sascstudent/jmvandermolen1/107432-003/21394648.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_105	ncbi		
+R1.18.00032	/exports/sascstudent/jmvandermolen1/106460-004/20982992.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_106	ncbi		
+R2.18.00033	/exports/sascstudent/jmvandermolen1/106460-004/20982994.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_107	ncbi		
+R2.25.00041	/exports/sascstudent/jmvandermolen1/106460-004/20983000.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_108	ncbi		
+R1.25.00042	/exports/sascstudent/jmvandermolen1/106460-004/20983002.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_109	ncbi		
+R2.25.00044	/exports/sascstudent/jmvandermolen1/106460-004/20983004.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_110	ncbi		
+R1.25.00043	/exports/sascstudent/jmvandermolen1/106460-004/20983006.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_111	ncbi		
+R2.25.00054	/exports/sascstudent/jmvandermolen1/106460-006/21052373.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_112	ncbi		
+R1.25.00053	/exports/sascstudent/jmvandermolen1/106460-006/21052375.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_113	ncbi		
+R2.25.00056	/exports/sascstudent/jmvandermolen1/106460-006/21052379.dedup.bam			Lymphocyte_NMD_inhibit	True	IntersectionStrict	True	reverse			GRCh38_114	ncbi		
+R1.25.00055	/exports/sascstudent/jmvandermolen1/106460-006/21052381.dedup.bam			Lymphocyte_NMD	True	IntersectionStrict	True	reverse			GRCh38_115	ncbi		
