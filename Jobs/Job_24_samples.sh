@@ -22,7 +22,7 @@ cd /exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2
 echo "Running FRASER on 24 samples"
 
 snakemake aberrantSplicing \
-    --cores "$SLURM_CPUS_PER_TASK" \
+    --cores 8 \
     --rerun-triggers mtime \
     -p
 
