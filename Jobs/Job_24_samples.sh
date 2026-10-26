@@ -23,7 +23,4 @@ echo "Running FRASER on 24 samples"
 
 snakemake aberrantSplicing \
     --cores 8 \
-    --rerun-triggers mtime \
     -p
-
-echo "FRASER completed!"
