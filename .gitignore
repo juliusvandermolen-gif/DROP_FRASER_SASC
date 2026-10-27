@@ -17,6 +17,7 @@ slurm-*.out
 
 # Negeren van tijdelijke Conda of Python mappen
 Data/
+Scripts/
 Output/
 .drop/
 .conda/
