@@ -11,7 +11,7 @@ NMD_inhibition_results <- fread(paste0(dir, "Lymphocyte_NMD_inhibit/results.tsv"
 NMD_inhibition_results_per_junction <- fread(paste0(dir, "Lymphocyte_NMD_inhibit/results_per_junction.tsv"))
 
 dataset_dir     <- "/exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_24_samples/processed_data/aberrant_splicing/datasets"
-annotation_name_NMD <- "raw-local-Lymphocyte_NMD"
+annotation_name_NMD <- "Lymphocyte_NMD"
 fds_NMD <- loadFraserDataSet(dir = dataset_dir, name = annotation_name_NMD) #Dataset
 
 
