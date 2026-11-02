@@ -10,16 +10,17 @@ NMD_results_per_junction <- fread(paste0(dir, "Lymphocyte_NMD/results_per_juncti
 NMD_inhibition_results <- fread(paste0(dir, "Lymphocyte_NMD_inhibit/results.tsv"))
 NMD_inhibition_results_per_junction <- fread(paste0(dir, "Lymphocyte_NMD_inhibit/results_per_junction.tsv"))
 
-dataset_dir     <- "/exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_24_samples/processed_data/aberrant_splicing/datasets"
-annotation_name_NMD <- "Lymphocyte_NMD"
+dataset_dir     <- "/exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_24_samples/processed_results/aberrant_splicing/datasets"
+annotation_name_NMD <- "Lymphocyte_NMD--GRCh38_104"
 fds_NMD <- loadFraserDataSet(dir = dataset_dir, name = annotation_name_NMD) #Dataset
+
+dir_plots_24 <- "/exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/Output_24_samples/plots_24_run"
 
 
 # %%
 kolom_NMD_results <- colnames(NMD_results)
-fds
+assayNames(fds_NMD)
 
-#Count check
 # %% 
 summary(NMD_results$totalCounts)
 summary(NMD_inhibition_results$totalCounts)
@@ -48,7 +49,15 @@ results_R1_26_00018[, .N, by = type]
 results_R1_26_00018[, .N, by = annotatedJunction]
 summary(results_R1_26_00018$nonsplitProportion)
 
-
+# %%
+#Create directory
+dir.create(dir_plots_24, showWarnings = FALSE, recursive = TRUE)
 
 # %%
+type_metric <- "jaccard"
 #Aberant plot per sample
+pdf(file.path(dir_plots_24, "05_aberrant_per_sample_jaccard.pdf"), width = 6, height = 5)
+tryCatch({
+  p <- plotAberrantPerSample(fds_NMD, type = type_metric, padjCutoff = 0.1)
+  print(p)
+}, finally = dev.off())
