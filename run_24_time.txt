@@ -1,0 +1,328 @@
+[Mon Oct 26 17:37:05 2026]
+rule AberrantSplicing_pipeline_aberrant_splicing_readme_md:
+[Mon Oct 26 17:37:05 2026]
+rule Pipeline_preprocessGeneAnnotation_R:
+[Mon Oct 26 17:37:05 2026]
+rule AberrantSplicing_pipeline_Counting_00_define_datasets_from_anno_R:
+[Mon Oct 26 17:37:05 2026]
+rule AberrantSplicing_pipeline_Counting_00_define_datasets_from_anno_R:
+[Mon Oct 26 17:37:05 2026]
+rule aberrantSplicing_dependency:
+[Mon Oct 26 17:37:16 2026]
+Finished job 81.
+[Mon Oct 26 17:37:16 2026]
+Finished job 66.
+[Mon Oct 26 17:37:47 2026]
+Finished job 43.
+[Mon Oct 26 17:37:47 2026]
+rule AberrantSplicing_pipeline_Counting_01_0_countRNA_init_R:
+[Mon Oct 26 17:37:47 2026]
+Finished job 11.
+[Mon Oct 26 17:37:47 2026]
+rule AberrantSplicing_pipeline_Counting_01_0_countRNA_init_R:
+[Mon Oct 26 17:38:14 2026]
+Finished job 10.
+[Mon Oct 26 17:38:14 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 17:38:14 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 17:38:14 2026]
+Finished job 42.
+[Mon Oct 26 17:38:56 2026]
+Finished job 72.
+[Mon Oct 26 17:41:40 2026]
+Finished job 14.
+[Mon Oct 26 17:41:40 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 17:41:46 2026]
+Finished job 19.
+[Mon Oct 26 17:41:46 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 17:49:36 2026]
+Finished job 47.
+[Mon Oct 26 17:49:37 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 17:55:20 2026]
+Finished job 41.
+[Mon Oct 26 17:55:20 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 17:59:14 2026]
+Finished job 22.
+[Mon Oct 26 17:59:14 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:00:45 2026]
+Finished job 18.
+[Mon Oct 26 18:00:45 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:09:41 2026]
+Finished job 46.
+[Mon Oct 26 18:09:42 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:11:17 2026]
+Finished job 21.
+[Mon Oct 26 18:11:17 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:12:41 2026]
+Finished job 53.
+[Mon Oct 26 18:12:41 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:19:47 2026]
+Finished job 48.
+[Mon Oct 26 18:19:47 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:24:09 2026]
+Finished job 15.
+[Mon Oct 26 18:24:10 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:32:02 2026]
+Finished job 45.
+[Mon Oct 26 18:32:02 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:32:41 2026]
+Finished job 44.
+[Mon Oct 26 18:32:41 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:42:34 2026]
+Finished job 50.
+[Mon Oct 26 18:42:34 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:42:49 2026]
+Finished job 17.
+[Mon Oct 26 18:42:50 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:50:32 2026]
+Finished job 12.
+[Mon Oct 26 18:50:32 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:53:30 2026]
+Finished job 9.
+[Mon Oct 26 18:53:30 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 18:57:03 2026]
+Finished job 20.
+[Mon Oct 26 18:57:03 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 19:00:17 2026]
+Finished job 49.
+[Mon Oct 26 19:00:17 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 19:00:49 2026]
+Finished job 51.
+[Mon Oct 26 19:00:49 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 19:04:03 2026]
+Finished job 16.
+[Mon Oct 26 19:04:04 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 19:05:42 2026]
+Finished job 54.
+[Mon Oct 26 19:05:42 2026]
+rule AberrantSplicing_pipeline_Counting_01_1_countRNA_splitReads_samplewise_R:
+[Mon Oct 26 19:14:11 2026]
+Finished job 13.
+[Mon Oct 26 19:18:12 2026]
+Finished job 52.
+[Mon Oct 26 19:18:12 2026]
+rule AberrantSplicing_pipeline_Counting_01_2_countRNA_splitReads_merge_R:
+[Mon Oct 26 19:19:29 2026]
+Finished job 8.
+[Mon Oct 26 19:19:29 2026]
+rule AberrantSplicing_pipeline_Counting_01_2_countRNA_splitReads_merge_R:
+[Mon Oct 26 19:20:46 2026]
+Finished job 40.
+[Mon Oct 26 19:20:46 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:20:46 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:21:39 2026]
+Finished job 33.
+[Mon Oct 26 19:21:39 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:21:58 2026]
+Finished job 59.
+[Mon Oct 26 19:21:58 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:22:55 2026]
+Finished job 62.
+[Mon Oct 26 19:22:55 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:23:45 2026]
+Finished job 63.
+[Mon Oct 26 19:23:45 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:24:36 2026]
+Finished job 7.
+[Mon Oct 26 19:24:36 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:25:15 2026]
+Finished job 58.
+[Mon Oct 26 19:25:15 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:26:35 2026]
+Finished job 39.
+[Mon Oct 26 19:26:35 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:27:19 2026]
+Finished job 29.
+[Mon Oct 26 19:27:19 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:28:25 2026]
+Finished job 28.
+[Mon Oct 26 19:28:25 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:28:37 2026]
+Finished job 55.
+[Mon Oct 26 19:28:37 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:29:16 2026]
+Finished job 30.
+[Mon Oct 26 19:29:16 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:29:19 2026]
+Finished job 64.
+[Mon Oct 26 19:29:19 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:31:05 2026]
+Finished job 57.
+[Mon Oct 26 19:31:05 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:31:08 2026]
+Finished job 32.
+[Mon Oct 26 19:31:08 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:31:57 2026]
+Finished job 27.
+[Mon Oct 26 19:31:57 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:32:41 2026]
+Finished job 25.
+[Mon Oct 26 19:32:41 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:33:02 2026]
+Finished job 24.
+[Mon Oct 26 19:33:02 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:33:40 2026]
+Finished job 60.
+[Mon Oct 26 19:33:40 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:34:34 2026]
+Finished job 56.
+[Mon Oct 26 19:34:34 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:35:08 2026]
+Finished job 23.
+[Mon Oct 26 19:35:08 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:35:47 2026]
+Finished job 31.
+[Mon Oct 26 19:35:47 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:37:04 2026]
+Finished job 26.
+[Mon Oct 26 19:37:04 2026]
+rule AberrantSplicing_pipeline_Counting_01_3_countRNA_nonSplitReads_samplewise_R:
+[Mon Oct 26 19:37:19 2026]
+Finished job 61.
+[Mon Oct 26 19:37:35 2026]
+Finished job 65.
+[Mon Oct 26 19:37:35 2026]
+rule AberrantSplicing_pipeline_Counting_01_4_countRNA_nonSplitReads_merge_R:
+[Mon Oct 26 19:38:13 2026]
+Finished job 6.
+[Mon Oct 26 19:38:14 2026]
+rule AberrantSplicing_pipeline_Counting_01_4_countRNA_nonSplitReads_merge_R:
+[Mon Oct 26 19:38:52 2026]
+Finished job 38.
+[Mon Oct 26 19:38:52 2026]
+rule AberrantSplicing_pipeline_Counting_01_5_countRNA_collect_R:
+[Mon Oct 26 19:38:52 2026]
+rule AberrantSplicing_pipeline_Counting_01_5_countRNA_collect_R:
+[Mon Oct 26 19:39:31 2026]
+Finished job 5.
+[Mon Oct 26 19:39:33 2026]
+Finished job 37.
+[Mon Oct 26 19:39:33 2026]
+rule AberrantSplicing_pipeline_Counting_02_psi_value_calculation_FraseR_R:
+[Mon Oct 26 19:43:12 2026]
+Finished job 4.
+[Mon Oct 26 19:43:13 2026]
+rule AberrantSplicing_pipeline_Counting_02_psi_value_calculation_FraseR_R:
+[Mon Oct 26 19:47:14 2026]
+Finished job 36.
+[Mon Oct 26 19:47:14 2026]
+rule AberrantSplicing_pipeline_Counting_03_filter_expression_FraseR_R:
+[Mon Oct 26 19:47:14 2026]
+rule AberrantSplicing_pipeline_Counting_03_filter_expression_FraseR_R:
+[Mon Oct 26 19:49:26 2026]
+Finished job 3.
+[Mon Oct 26 19:49:26 2026]
+rule AberrantSplicing_pipeline_Counting_Summary_R:
+[Mon Oct 26 19:49:33 2026]
+Finished job 35.
+[Mon Oct 26 19:49:33 2026]
+rule AberrantSplicing_pipeline_Counting_Summary_R:
+[Mon Oct 26 19:50:46 2026]
+Finished job 2.
+[Mon Oct 26 19:50:46 2026]
+Finished job 34.
+[Mon Oct 26 19:50:46 2026]
+rule AberrantSplicing_pipeline_FRASER_04_fit_hyperparameters_FraseR_R:
+[Mon Oct 26 21:05:14 2026]
+Finished job 78.
+[Mon Oct 26 21:05:14 2026]
+rule AberrantSplicing_pipeline_FRASER_04_fit_hyperparameters_FraseR_R:
+[Mon Oct 26 22:17:29 2026]
+Finished job 71.
+[Mon Oct 26 22:17:29 2026]
+rule AberrantSplicing_pipeline_FRASER_05_fit_autoencoder_FraseR_R:
+[Tue Oct 27 00:02:58 2026]
+Finished job 77.
+[Tue Oct 27 00:02:58 2026]
+rule AberrantSplicing_pipeline_FRASER_06_annotate_genes_R:
+[Tue Oct 27 00:13:43 2026]
+Finished job 76.
+[Tue Oct 27 00:13:44 2026]
+rule AberrantSplicing_pipeline_FRASER_07_calculation_stats_FraseR_R:
+[Tue Oct 27 00:21:49 2026]
+Finished job 80.
+[Tue Oct 27 00:21:49 2026]
+rule AberrantSplicing_pipeline_FRASER_08_extract_results_FraseR_R:
+[Tue Oct 27 00:42:56 2026]
+Finished job 79.
+[Tue Oct 27 00:42:56 2026]
+rule AberrantSplicing_pipeline_FRASER_05_fit_autoencoder_FraseR_R:
+[Tue Oct 27 02:25:33 2026]
+Finished job 70.
+[Tue Oct 27 02:25:33 2026]
+rule AberrantSplicing_pipeline_FRASER_06_annotate_genes_R:
+[Tue Oct 27 02:35:32 2026]
+Finished job 69.
+[Tue Oct 27 02:35:32 2026]
+rule AberrantSplicing_pipeline_FRASER_07_calculation_stats_FraseR_R:
+[Tue Oct 27 02:43:24 2026]
+Finished job 74.
+[Tue Oct 27 02:43:24 2026]
+rule AberrantSplicing_pipeline_FRASER_08_extract_results_FraseR_R:
+[Tue Oct 27 03:05:20 2026]
+Finished job 73.
+[Tue Oct 27 03:05:20 2026]
+rule AberrantSplicing_pipeline_Counting_DatasetsF_R:
+[Tue Oct 27 03:05:20 2026]
+rule AberrantSplicing_pipeline_FRASER_Summary_R:
+[Tue Oct 27 03:05:20 2026]
+rule AberrantSplicing_pipeline_FRASER_Summary_R:
+[Tue Oct 27 03:05:24 2026]
+Finished job 1.
+[Tue Oct 27 03:09:35 2026]
+Finished job 68.
+[Tue Oct 27 03:09:37 2026]
+Finished job 75.
+[Tue Oct 27 03:09:37 2026]
+rule AberrantSplicing_pipeline_FRASER_Datasets_R:
+[Tue Oct 27 03:09:40 2026]
+Finished job 67.
+[Tue Oct 27 03:09:40 2026]
+rule aberrantSplicing:
+[Tue Oct 27 03:09:50 2026]
+Finished job 0.

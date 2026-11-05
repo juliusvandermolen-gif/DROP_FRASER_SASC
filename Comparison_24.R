@@ -61,3 +61,8 @@ tryCatch({
   p <- plotAberrantPerSample(fds_NMD, type = type_metric, padjCutoff = 0.1)
   print(p)
 }, finally = dev.off())
+
+
+# %%
+# R log .drop directory
+rds_log <- readRDS("/exports/sascstudent/jmvandermolen1/Developer/drop_demo_fraser2/.drop/tmp/AS/Lymphocyte_NMD_inhibit--GRCh38_104/FRASER_summary.Rds")

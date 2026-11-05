@@ -9,6 +9,8 @@
 *.vcf
 *.fasta
 *.fa
+.snakemake/
+.wBuild/
 
 # Negeren van cluster logbestanden (SLURM / PBS)
 slurm-*.out
@@ -17,8 +19,11 @@ slurm-*.out
 
 # Negeren van tijdelijke Conda of Python mappen
 Data/
+Runs/
 Scripts/
 Output/
+Output_24_samples/
+FRASER_output/
 .drop/
 .conda/
 __pycache__/
